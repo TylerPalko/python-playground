@@ -16,7 +16,7 @@ items = [
 # Defines what to do if a user decides to remove an item.
 def removeItem(item):
     if item not in items:
-        print('This item was either already removed, misstyped, or it was never in the list!')
+        print('This item was either already removed, mistyped, or it was never in the list!')
     for i in items:
         if item in i == item:
             items.remove(i)
@@ -39,21 +39,21 @@ while True:
     print('You have guessed ' + str(guesses) + ' times!')
     userInput = input('Please guess an item, or type exit to give up and get the answer!: ')
 
-    # If the user types "exit" that means they give up and we output the answer and the ammount of guesses that they did
+    # If the user types "exit" that means they give up and we output the answer and the amount of guesses that they did
     if userInput == str("exit"):
         print('The answer was ' + random_item + ', and you gave up after ' + str(guesses) + ' guesses.')
         break
     
-    #if the user gets the corect word we tell them so and tell them how many guesses they had
+    #if the user gets the correct word we tell them so and tell them how many guesses they had
     if userInput == str(random_item):
         guesses += 1
         print('You got it correct after ' + str(guesses) + ' guesses!')
         break
     
-    # if the user inputed an item that was not in the list then we output this
+    # if the user inputted an item that was not in the list then we output this
     if userInput not in items:
         print('This item is not in the list or you mistyped it.')
-    # If the user guessed incorectly then we output this
+    # If the user guessed incorrectly then we output this
     elif userInput != random_item:
         guesses += 1
         print('Sorry, thats wrong!')
