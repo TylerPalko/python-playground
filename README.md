@@ -1,1 +1,1 @@
-This is a personal reposotory for school
+This is a personal repository for school
