@@ -9,17 +9,19 @@ items_large = [ # this was a larger list of items I used off video, this was too
     "pencil", "quilt", "rainbow", "sunflower", "television"
 ]
 
-items = [
+items= [
     "apple", "banana", "carrot", "desk", "elephant", 
     "fork"]
 
 # Defines what to do if a user decides to remove an item.
 def removeItem(item):
-    if item not in items:
+    if item in items:
+        for i in items:
+            if item in i == item:
+                items.remove(i)
+    else: # if the user types a non existing item print this.
         print('This item was either already removed, mistyped, or it was never in the list!')
-    for i in items:
-        if item in i == item:
-            items.remove(i)
+    
 
 random_item = random.choice(items) # Select our random item that is supposed to be guessed by the user.
 guesses = 0
